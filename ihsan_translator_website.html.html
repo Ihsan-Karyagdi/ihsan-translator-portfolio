@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)file:///C:/Users/LENOVO/Downloads/ihsan_translator_website_1.html -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ihsan Qasim - Professional Translator &amp; Language Specialist. Expert in English, Arabic, Turkish, Turkmen translations across entertainment, medical, business, legal, and technology sectors.">
+    <meta name="keywords" content="translator, Arabic, Turkish, English, Turkmen, Netflix, subtitles, medical translation, legal translation, localization">
+    <title>Ihsan Qasim - Professional Translator &amp; Language Specialist</title>
+    
+    <!-- Fonts -->
+    <link href="./Ihsan Qasim - Professional Translator &amp; Language Specialist_files/css2" rel="stylesheet">
+    <link href="./Ihsan Qasim - Professional Translator &amp; Language Specialist_files/all.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #f093fb;
+            --text-dark: #2d3748;
+            --text-light: #4a5568;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --shadow-hover: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="300" r="100" fill="url(%23a)"/><circle cx="800" cy="200" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>') no-repeat center center;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.3s forwards;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.6s forwards;
+        }
+        
+        .hero-languages {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.9s forwards;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 1.2s forwards;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            color: #fff;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 1.5s forwards;
+        }
+        
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+        }
+        
+        .profile-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-title {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info {
+            text-align: left;
+            margin-top: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .contact-item i {
+            width: 20px;
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+        
+        .service-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .service-description {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .service-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .service-list li {
+            padding: 0.3rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .service-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .portfolio-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .portfolio-header {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        
+        .portfolio-category {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .portfolio-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+        
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+        
+        .portfolio-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .portfolio-stat {
+            text-align: center;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 10px;
+        }
+        
+        .portfolio-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .portfolio-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        
+        .portfolio-description {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        /* Languages Section */
+        .languages {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .language-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .language-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .language-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .language-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .language-level {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .language-specialization {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-info-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .contact-method i {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: var(--primary-color);
+            width: 30px;
+        }
+        
+        .contact-method:hover i {
+            color: white;
+        }
+        
+        .contact-form {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            background: white;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-button {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-link {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid #4a5568;
+            opacity: 0.7;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .scroll-to-top.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scroll-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid,
+            .portfolio-grid,
+            .languages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Ihsan Qasim</div>
+            <ul class="nav-menu">
+                <li><a href="file:///C:/Users/LENOVO/Downloads/ihsan_translator_website_1.html#home" class="nav-link">Home</a></li>
+                <li><a href="file:///C:/Users/LENOVO/Downloads/ihsan_translator_website_1.html#about" class="nav-link">About</a></li>
+                <li><a href="file:///C:/Users/LENOVO/Downloads/ihsan_translator_website_1.html#services" class="nav-link">Services</a></li>
+                <li><a href="file:///C:/Users/LENOVO/Downloads/ihsan_translator_website_1.html#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="file:///C:/Users/LENOVO/Downloads/ihsan_translator_website_1.html#languages" class="nav-link">Languages</a></li>
+                <li><a href="file:///C:/Users/LENOVO/Downloads/ihsan_translator_website_1.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Ihsan Qasim</h1>
+            <p class="hero-subtitle">Professional Translator &amp; Language Specialist</p>
+            <p class="hero-languages">English • Arabic • Turkish • Turkmen</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">1.27M+</span>
+                    <span class="stat-label">Words Translated</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">910+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Industries Served</span>
+                </div>
+            </div>
+            
+            <a href="file:///C:/Users/LENOVO/Downloads/ihsan_translator_website_1.html#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="profile-card">
+                        <div class="profile-pic">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="profile-name">Ihsan Qasim</h3>
+                        <p class="profile-title">Professional Translator</p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>eng.ihsan-karyagdi@hotmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+964 77 277 61230</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+90 552 866 8989</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Baghdad, Iraq / Istanbul, Turkey</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>Highly accomplished trilingual translator with over 5 years of proven expertise across entertainment, medical, business, legal, and technology sectors. I have successfully delivered over 1.27 million words of professional translation with specialization in audiovisual content, medical documentation, e-commerce localization, legal certification, and software localization.</p>
+                    
+                    <p>My unique background combines technical precision with cultural sensitivity, allowing me to deliver high-quality translations that meet international standards across diverse industries. I leverage my engineering background and project management expertise to provide exceptional technical translation services.</p>
+                    
+                    <p>My portfolio includes work with major streaming platforms like Netflix, pharmaceutical companies, international organizations like ICRC, and technology companies, ensuring accurate and culturally-appropriate translations that resonate with target audiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Translation Services</h2>
+            <div class="services-grid">
+                <div class="service-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <div class="service-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="service-title">Entertainment &amp; Media</h3>
+                    <p class="service-description">Professional audiovisual translation for streaming platforms, films, TV series, and digital content.</p>
+                    <ul class="service-list">
+                        <li>Netflix &amp; Streaming Platforms</li>
+                        <li>Film &amp; TV Subtitling</li>
+                        <li>Documentary Translation</li>
+                        <li>YouTube Content</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <div class="service-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3 class="service-title">Medical &amp; Pharmaceutical</h3>
+                    <p class="service-description">Specialized medical translations ensuring accuracy and compliance with international standards.</p>
+                    <ul class="service-list">
+                        <li>Drug Information Leaflets</li>
+                        <li>Medical Device Manuals</li>
+                        <li>Clinical Trial Documents</li>
+                        <li>Medical Reports</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="service-title">Business &amp; E-commerce</h3>
+                    <p class="service-description">Comprehensive business translation services for global market expansion.</p>
+                    <ul class="service-list">
+                        <li>E-commerce Product Listings</li>
+                        <li>Corporate Websites</li>
+                        <li>Marketing Campaigns</li>
+                        <li>Business Contracts</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <div class="service-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="service-title">Legal &amp; Immigration</h3>
+                    <p class="service-description">Certified translations for legal documents and immigration processes.</p>
+                    <ul class="service-list">
+                        <li>Immigration Documents</li>
+                        <li>Court Proceedings</li>
+                        <li>Asylum Applications</li>
+                        <li>Real Estate Contracts</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="service-title">Technology &amp; Software</h3>
+                    <p class="service-description">Technical localization for software, applications, and digital platforms.</p>
+                    <ul class="service-list">
+                        <li>Mobile App Localization</li>
+                        <li>Software User Manuals</li>
+                        <li>Video Game Content</li>
+                        <li>API Documentation</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <div class="service-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3 class="service-title">Interpretation Services</h3>
+                    <p class="service-description">Professional interpretation for conferences, meetings, and events.</p>
+                    <ul class="service-list">
+                        <li>Simultaneous Interpretation</li>
+                        <li>Consecutive Interpretation</li>
+                        <li>Conference Interpretation</li>
+                        <li>Business Meetings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfolio Highlights</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <div class="portfolio-header">
+                        <div class="portfolio-category">Entertainment &amp; Media</div>
+                        <h3 class="portfolio-title">Audiovisual Translation</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-number">645K+</div>
+                                <div class="portfolio-label">Words</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-number">260+</div>
+                                <div class="portfolio-label">Projects</div>
+                            </div>
+                        </div>
+                        <p class="portfolio-description">
+                            Translated 3 complete Netflix series (180 episodes), 8 theatrical films, 25 documentary episodes, and 50+ YouTube videos across multiple genres and platforms.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <div class="portfolio-header">
+                        <div class="portfolio-category">Medical &amp; Pharmaceutical</div>
+                        <h3 class="portfolio-title">Healthcare Documentation</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-number">115K+</div>
+                                <div class="portfolio-label">Words</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-number">150+</div>
+                                <div class="portfolio-label">Documents</div>
+                            </div>
+                        </div>
+                        <p class="portfolio-description">
+                            Specialized translations for pharmaceutical companies including drug leaflets, medical device manuals, clinical trials, and patient reports for international healthcare providers.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <div class="portfolio-header">
+                        <div class="portfolio-category">Business &amp; E-commerce</div>
+                        <h3 class="portfolio-title">Commercial Content</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-number">240K+</div>
+                                <div class="portfolio-label">Words</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-number">270+</div>
+                                <div class="portfolio-label">Projects</div>
+                            </div>
+                        </div>
+                        <p class="portfolio-description">
+                            Localized 200+ Amazon product listings, 8 corporate websites, 15 marketing campaigns, and 50+ business contracts for international trade and commerce.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <div class="portfolio-header">
+                        <div class="portfolio-category">Legal &amp; Immigration</div>
+                        <h3 class="portfolio-title">Certified Documents</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-number">75K+</div>
+                                <div class="portfolio-label">Words</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-number">200+</div>
+                                <div class="portfolio-label">Certifications</div>
+                            </div>
+                        </div>
+                        <p class="portfolio-description">
+                            Certified translations of 150+ immigration documents, 30+ court proceedings, 20+ asylum cases, and various legal contracts for international clients.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <div class="portfolio-header">
+                        <div class="portfolio-category">Technology &amp; Software</div>
+                        <h3 class="portfolio-title">Digital Localization</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-number">195K+</div>
+                                <div class="portfolio-label">Words</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-number">30+</div>
+                                <div class="portfolio-label">Applications</div>
+                            </div>
+                        </div>
+                        <p class="portfolio-description">
+                            Localized 15 mobile applications, 8 enterprise software systems, 3 video games, and 5 API documentation projects for technology companies.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <div class="portfolio-header">
+                        <div class="portfolio-category">Humanitarian</div>
+                        <h3 class="portfolio-title">International Aid</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-number">4+ Years</div>
+                                <div class="portfolio-label">ICRC Experience</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-number">Multiple</div>
+                                <div class="portfolio-label">NGOs</div>
+                            </div>
+                        </div>
+                        <p class="portfolio-description">
+                            Extensive experience with ICRC and international NGOs, translating humanitarian documents, field reports, and emergency communications with cultural sensitivity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="languages">
+        <div class="container">
+            <h2 class="section-title">Language Proficiency</h2>
+            <div class="languages-grid">
+                <div class="language-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <h3 class="language-name">Arabic</h3>
+                    <span class="language-level">Native</span>
+                    <p class="language-specialization">All domains including literary, technical, and legal translations</p>
+                </div>
+                
+                <div class="language-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <h3 class="language-name">Turkmen</h3>
+                    <span class="language-level">Native</span>
+                    <p class="language-specialization">Complete fluency with cultural nuances and regional dialects</p>
+                </div>
+                
+                <div class="language-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <h3 class="language-name">English</h3>
+                    <span class="language-level">Fluent (C2)</span>
+                    <p class="language-specialization">Technical, Medical, Legal, and Business translations</p>
+                </div>
+                
+                <div class="language-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <h3 class="language-name">Turkish</h3>
+                    <span class="language-level">Advanced (C1)</span>
+                    <p class="language-specialization">Media, Business, Legal, and Entertainment content</p>
+                </div>
+                
+                <div class="language-card" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
+                    <h3 class="language-name">Kurdish</h3>
+                    <span class="language-level">Conversational</span>
+                    <p class="language-specialization">General communication and basic translations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info-section">
+                    <h3>Contact Information</h3>
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            eng.ihsan-karyagdi@hotmail.com
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Iraq</strong><br>
+                            +964 77 277 61230
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Turkey</strong><br>
+                            +90 552 866 8989
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Locations</strong><br>
+                            Baghdad, Iraq<br>
+                            Istanbul, Turkey
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Availability</strong><br>
+                            24/7 for urgent projects<br>
+                            GMT+3 (Turkey Time)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Me a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <input type="text" id="service" name="service" placeholder="e.g., Netflix subtitles, Medical translation, Legal documents">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" placeholder="Please describe your project, word count, deadline, and any specific requirements" required=""></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Ihsan Qasim</div>
+            <p class="footer-description">Professional Translator &amp; Language Specialist</p>
+            <div class="social-links">
+                <a href="file:///C:/Users/LENOVO/Downloads/ihsan_translator_website_1.html#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="file:///C:/Users/LENOVO/Downloads/ihsan_translator_website_1.html#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="file:///C:/Users/LENOVO/Downloads/ihsan_translator_website_1.html#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="file:///C:/Users/LENOVO/Downloads/ihsan_translator_website_1.html#" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Ihsan Qasim. All rights reserved. | Professional Translation Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="file:///C:/Users/LENOVO/Downloads/ihsan_translator_website_1.html#home" class="scroll-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar Background on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Scroll to Top Button
+        const scrollToTop = document.querySelector('.scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollToTop.classList.add('show');
+            } else {
+                scrollToTop.classList.remove('show');
+            }
+        });
+
+        // Form Submission
+        const contactForm = document.querySelector('.contact-form form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .portfolio-card, .language-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+
+</body></html>
